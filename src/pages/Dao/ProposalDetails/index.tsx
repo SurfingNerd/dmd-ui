@@ -110,10 +110,10 @@ const ProposalDetails: React.FC<ProposalDetailsProps> = () => {
   };
 
   const handleCastVote = async (vote: number) => {
-    if (!web3Context.contractsManager.stContract?.methods.isPoolValid(web3Context.userWallet.myAddr)) {
-      toast.warning(`Only validator candidates can vote`);
-      return;
-    }
+    // if (!web3Context.contractsManager.stContract?.methods.isPoolValid(web3Context.userWallet.myAddr)) {
+    //   toast.warning(`Only validator candidates can vote`);
+    //   return;
+    // }
 
     daoContext.castVote(proposal.id, vote, voteReason).then(() => {
       getProposalDetails(proposal.id);

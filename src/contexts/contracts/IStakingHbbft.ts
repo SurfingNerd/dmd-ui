@@ -53,8 +53,6 @@ export interface IStakingHbbft extends BaseContract {
 
     isPoolActive(arg0: string): NonPayableTransactionObject<boolean>;
 
-    isPoolValid(arg0: string): NonPayableTransactionObject<boolean>;
-
     notifyAvailability(
       _stakingAddress: string
     ): NonPayableTransactionObject<void>;

@@ -155,6 +155,8 @@ const Web3ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
         contractManager.getHbbftAggregator(),
         contractManager.getBonusScoreSystem()
       ]);
+
+      contractManager.web3.eth.getBlock('latest').then(console.log); 
     
       setContractsManager({
         contracts: contractManager,

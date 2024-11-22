@@ -191,10 +191,6 @@ export interface DiamondDao extends BaseContract {
       _selector: string
     ): NonPayableTransactionObject<[string, string[]]>;
 
-    getAllowedParamsRangeWithSelector(
-      _selector: string | number[]
-    ): NonPayableTransactionObject<[string, string[]]>;
-
     getCurrentPhaseProposals(): NonPayableTransactionObject<string[]>;
 
     getProposal(
